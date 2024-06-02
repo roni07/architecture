@@ -1,0 +1,12 @@
+@import "../../assets/scss/colors";
+
+.secondary-btn {
+  background-color: $secondary-color;
+  color: $white;
+
+  &:hover {
+    background-color: $secondary-color !important;
+    color: $white !important;
+    border-color: #d9d9d9 !important;
+  }
+}

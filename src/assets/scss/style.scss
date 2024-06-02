@@ -1,0 +1,82 @@
+@import "./common.scss";
+@import "colors";
+@import url('https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700&family=Inter:wght@300;400;500;600&family=Noto+Sans+Bengali:wght@300;400;500;600&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Inter', 'Almarai', 'Noto Sans Bengali', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: $body-bgc;
+}
+
+code {
+  font-family: 'Inter', 'Almarai', 'Noto Sans Bengali', sans-serif;
+}
+
+/* This will work on Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: darkgray #dddddd;
+}
+
+/* Target's on Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #dddddd;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: darkgray;
+}
+
+.pos-relative {
+  position: relative;
+}
+
+/* ============  Start Custom CSS =========== */
+
+/* APP layout */
+.app-wrapper {
+  display: grid;
+  @include fullDisplay;
+
+  .my-sider {
+
+    margin-right: 20px;
+
+    //@media screen and (max-width: 991px) {
+    //  position: fixed;
+    //  z-index: 999;
+    //}
+  }
+
+  .app-page {
+    margin-right: 20px;
+
+    .page-header {
+      //margin-top: 5px;
+
+      .ant-page-header {
+        padding-inline: unset;
+        padding: 10px 0;
+
+        .ant-page-header-heading-left {
+          //padding: 0 30px;
+        }
+      }
+    }
+
+    .page-content {
+      overflow-y: auto;
+      height: calc(100vh - 154px);
+      //margin-bottom: 10px;
+      padding: 16px 24px;
+      background-color: $white;
+    }
+  }
+}
